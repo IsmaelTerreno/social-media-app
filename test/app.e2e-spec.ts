@@ -16,9 +16,6 @@ describe('TweetController (e2e)', () => {
   });
 
   it('Create a new tweet - POST', () => {
-    return request(app.getHttpServer())
-      .post('/tweet')
-      .expect(201)
-      .expect('Hello World!');
+    return request(app.getHttpServer()).post('/tweet').expect(401);
   });
 });

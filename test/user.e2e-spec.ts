@@ -2,7 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
 import { AppModule } from '../src/app.module';
-import { generateTestEmail } from './utils';
+import { generateTestEmail, generateTestName } from './utils';
 
 describe('UserController (e2e)', () => {
   let app: INestApplication;
@@ -18,6 +18,7 @@ describe('UserController (e2e)', () => {
 
   it('Register a user - POST', () => {
     const testUser = {
+      name: generateTestName(),
       email: generateTestEmail(),
       password: 'xxx',
     };
@@ -29,6 +30,7 @@ describe('UserController (e2e)', () => {
 
   it('Login a user - POST)', () => {
     const testUser = {
+      name: generateTestName(),
       email: generateTestEmail(),
       password: 'xxx',
     };
