@@ -2,7 +2,7 @@ import { Controller, Post } from '@nestjs/common';
 import { TweetService } from './tweet.service';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 
-@ApiTags('App module')
+@ApiTags('Tweet module')
 @Controller('tweet')
 export class TweetController {
   constructor(private readonly appService: TweetService) {}
