@@ -1,13 +1,8 @@
 import { Module } from '@nestjs/common';
-import { TweetController } from './tweet/tweet.controller';
-import { TweetService } from './tweet/tweet.service';
-import { UserController } from './user/user.controller';
-import { DatabaseModule } from './database/database.module';
-import { ConfigModule } from '@nestjs/config';
+import { UserModule } from './user/user.module';
+import { TweetModule } from './tweet/tweet.module';
 
 @Module({
-  imports: [ConfigModule.forRoot(), DatabaseModule],
-  controllers: [TweetController, UserController],
-  providers: [TweetService],
+  imports: [UserModule, TweetModule],
 })
 export class AppModule {}

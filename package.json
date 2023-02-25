@@ -31,7 +31,9 @@
     "typeorm": "^0.3.12",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
-    "@nestjs/config": "^2.3.1"
+    "@nestjs/config": "^2.3.1",
+    "unique-names-generator": "^4.7.1",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",
