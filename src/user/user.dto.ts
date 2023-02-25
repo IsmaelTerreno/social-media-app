@@ -6,7 +6,7 @@ export class UserDto {
     description: 'This will identify the unique user name in our database.',
   })
   @IsString()
-  name: string;
+  email: string;
 
   @ApiProperty({
     description: 'Current password for the user.',

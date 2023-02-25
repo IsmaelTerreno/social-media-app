@@ -7,7 +7,7 @@ import { ApiOperation, ApiTags } from '@nestjs/swagger';
 export class TweetController {
   constructor(private readonly appService: TweetService) {}
 
-  @Post('create')
+  @Post()
   @ApiOperation({ summary: 'Create a tweet' })
   create(): string {
     return this.appService.getHello();

@@ -15,17 +15,17 @@ describe('UserController (e2e)', () => {
     await app.init();
   });
 
-  it('Register a user - POST - E2E', () => {
+  it('Register a user - POST', () => {
     return request(app.getHttpServer())
       .post('/user/register')
-      .send({ name: 'john', password: 'xxx' })
+      .send({ email: 'john', password: 'xxx' })
       .expect(201);
   });
 
-  it('Login a user - POST - E2E)', () => {
+  it('Login a user - POST)', () => {
     return request(app.getHttpServer())
       .post('/user/login')
-      .send({ name: 'john', password: 'xxx' })
+      .send({ email: 'john', password: 'xxx' })
       .expect(200);
   });
 });

@@ -3,7 +3,7 @@ import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
 import { AppModule } from '../src/app.module';
 
-describe('AppController (e2e)', () => {
+describe('TweetController (e2e)', () => {
   let app: INestApplication;
 
   beforeEach(async () => {
@@ -15,10 +15,10 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
+  it('Create a new tweet - POST', () => {
     return request(app.getHttpServer())
-      .get('/')
-      .expect(200)
+      .post('/tweet')
+      .expect(201)
       .expect('Hello World!');
   });
 });
